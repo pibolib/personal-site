@@ -11,7 +11,10 @@ Built using HTML, CSS, JS + jQuery.
     - [ ] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
     - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires Liliumbot to be created.
 - [ ] Fancy works display
-    - [ ] JQuery parses CSV into JSON.
+    - [ ] ~~JQuery parses CSV into JSON.~~
+    - [ ] Array parsed into JSON is read to create HTML elements.
+        - [x] Sections are created for each year.
+        - [ ] Each section contains a list of works with classes based on the desired tags.        
 - [ ] Page translation systems
 
 ### [Site Design Document](https://www.figma.com/file/jHVir8MYgrJfB8123VqQdz/Personal-Site-Design-v1.6?node-id=0%3A1&t=L1pWkhyKKDyjvGvK-1)
