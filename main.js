@@ -6,43 +6,63 @@ const works = [
 ["Trung Sisters","Game","2022","1","N","https://pibolib.itch.io/trung-sisters","#"],
 ["未来よりMESSAGE","Music","2021","12","N","https://pibolib.bandcamp.com/album/message","#"],
 ["GemStreak: Curse of the Time Machine","Game","2021","7","N","https://pibolib.itch.io/gemstreak","#"],
-["永遠にPROGRESS","Music","2021","3","N","https://pibolib.bandcamp.com/album/progress","#"]
+["永遠にPROGRESS","Music","2021","3","N","https://pibolib.bandcamp.com/album/progress","./assets/eienniprogresscover.png"]
 ];
 const worksJSON = arrayToObject(works);
 const currentDate = new Date()
-var currentYear = currentDate.getFullYear();
-var worksEarliestYear = currentYear;
-for(var work of worksJSON) {
-    if(parseInt(work.year) < worksEarliestYear) {
-        worksEarliestYear = parseInt(work.year);
-    }
-}
+const currentYear = currentDate.getFullYear();
+var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
 
 const worksDiv = document.getElementById("works-div");
 for(var year = currentYear+1; year >= worksEarliestYear; year--) {
+    var div = document.createElement("div");
     var title = document.createElement("h3");
     var textData = document.createTextNode(year);
+    var workContainerDiv = document.createElement("div");
     title.appendChild(textData);
+    workContainerDiv.setAttribute('id',year);
+    workContainerDiv.classList.add("work-flexbox");
     var hbar = document.createElement("hr");
-    worksDiv.appendChild(title);
-    worksDiv.appendChild(hbar);
-    console.log(year)
+    div.appendChild(title);
+    div.appendChild(hbar);
+    div.appendChild(workContainerDiv);
+    worksDiv.appendChild(div);
+    //console.log(year);
 }
 
+for(work of worksJSON) {
+    var div = createWorkCard(work.title, work.type, work.year, work.month, work.indev, work.link, work.image);
+    var targetDiv = document.getElementById(work.year);
+    targetDiv.appendChild(div);
+}
 
+function getEarliestYear(jsonArray, compareYear) {
+    var earliestYear = compareYear;
+    for(item of jsonArray) {
+        if(parseInt(item.year) < compareYear) {
+            earliestYear = parseInt(item.year);
+        }
+    }
+    return earliestYear; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+function createWorkCard(title, type, year, month, indev, link, image) {
+    var div = document.createElement("div");
+    div.classList.add([type,indev,"work","card"]);
+    var a = document.createElement("a");
+    a.setAttribute('href',link);
+    a.setAttribute('target',"_blank");
+    var img = document.createElement("img");
+    img.setAttribute('src',image);
+    img.classList.add("work-img");
+    a.appendChild(img);
+    var p = document.createElement("p");
+    pData = document.createTextNode(title + " ("+year+"/"+month+")");
+    p.appendChild(pData);
+    a.appendChild(p);
+    div.appendChild(a);
+    return div;
+}
 
 function arrayToObject(arr) {
 	var keys = arr[0];
