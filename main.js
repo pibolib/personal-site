@@ -13,27 +13,34 @@ const currentDate = new Date()
 const currentYear = currentDate.getFullYear();
 var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
 
-const worksDiv = document.getElementById("works-div");
-for(var year = currentYear+1; year >= worksEarliestYear; year--) {
-    var div = document.createElement("div");
-    var title = document.createElement("h3");
-    var textData = document.createTextNode(year);
-    var workContainerDiv = document.createElement("div");
-    title.appendChild(textData);
-    workContainerDiv.setAttribute('id',year);
-    workContainerDiv.classList.add("work-flexbox");
-    var hbar = document.createElement("hr");
-    div.appendChild(title);
-    div.appendChild(hbar);
-    div.appendChild(workContainerDiv);
-    worksDiv.appendChild(div);
-    //console.log(year);
+createWorkSections();
+createWorks();
+
+function createWorks() {
+    for(work of worksJSON) {
+        var div = createWorkCard(work.title, work.type, work.year, work.month, work.indev, work.link, work.image);
+        var targetDiv = document.getElementById(work.year);
+        targetDiv.appendChild(div);
+    }
 }
 
-for(work of worksJSON) {
-    var div = createWorkCard(work.title, work.type, work.year, work.month, work.indev, work.link, work.image);
-    var targetDiv = document.getElementById(work.year);
-    targetDiv.appendChild(div);
+function createWorkSections() {
+    const worksDiv = document.getElementById("works-div");
+    for(var year = currentYear+1; year >= worksEarliestYear; year--) {
+        var div = document.createElement("div");
+        var title = document.createElement("h3");
+        var textData = document.createTextNode(year);
+        var workContainerDiv = document.createElement("div");
+        title.appendChild(textData);
+        workContainerDiv.setAttribute('id',year);
+        workContainerDiv.classList.add("work-flexbox");
+        var hbar = document.createElement("hr");
+        div.appendChild(title);
+        div.appendChild(hbar);
+        div.appendChild(workContainerDiv);
+        worksDiv.appendChild(div);
+        //console.log(year);
+    }
 }
 
 function getEarliestYear(jsonArray, compareYear) {
