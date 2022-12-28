@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>pibolib - main</title>
+        <title>pibolib</title>
         <link rel="stylesheet" href="main.css">
         <meta charset="UTF-8">
         <meta name="description" content="pibolib's Portfolio Website.">
         <meta name="keywords" content="pibolib, games, music, portfolio, works">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jonathan Ouf">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+        <script src="./main.js" defer></script>
     </head>
     <body>
         <div class="flexbox">
@@ -19,9 +23,12 @@
                         <li><a href="#works">Works</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li id="zikuudelta-link"><a href="#zikuudelta">時空Δ</a></li>
+                        <li><a href="#zikuudelta" id="zikuudelta-link">時空Δ</a></li>
                     </ul>
                 </nav>
+                <p style="position:absolute; top:85%; left: 1%">
+                    Website v1.6 (dev) © Jonathan Ouf [LANG: <a id="lang" href="#">EN</a>]
+                </p>
             </section>
             <section id="about">
                 <h1>About Me</h1>
@@ -36,14 +43,18 @@
             <section id="works">
                 <h1>Works</h1>
                 <p>
-                    To be filled with a gallery display of works sortable by tags.
+                    Filter: <a id="work-toggle-game" class="bold" onclick="toggleWorkCategory('game')">Games</a> | <a id="work-toggle-music" class="bold" onclick="toggleWorkCategory('music')">Music</a> | <a id="work-toggle-other" class="bold" onclick="toggleWorkCategory('other')">Other</a> (click to toggle) 
                 </p>
+                <div id="works-div">
+
+                </div>
             </section>
             <section id="blog">
                 <h1>Blog</h1>
                 <p>
-                    To be filled with rss feed parsing nonsense.
+                    Filter: ???
                 </p>
+                <div id="rss-feeds"></div>
             </section>
             <section id="contact">
                 <h1>Contact</h1>
