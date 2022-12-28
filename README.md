@@ -1,7 +1,11 @@
 # personal-site
 
 This is pibolib's personal site. Based on design v1.6. Site implementation may differ from design.
-Built using HTML, CSS, JS + jQuery.
+Built using HTML, CSS, JS, and JQuery, along with moment.js and jquery-rss.
+
+### Libraries
+moment.js: https://momentjs.com (used by jquery-rss for now, may replace later)
+jquery-rss: https://github.com/sdepold/jquery-rss
 
 ### Site Specifications
 
@@ -12,13 +16,12 @@ Built using HTML, CSS, JS + jQuery.
     - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires Liliumbot to be created.
     - [ ] Sort blog posts by title categories.
 - [ ] Fancy works display
-    - [ ] ~~JQuery parses CSV into JSON.~~
     - [x] Array parsed into JSON is read to create HTML elements.
         - [x] Sections are created for each year.
         - [x] Works render in the respective section.
         - [x] Each section contains a list of works with classes based on the desired tags.        
     - [ ] Works have images.
-    - [ ] Sort works by tags.
+    - [x] Sort works by tags.
 - [ ] Page translation systems
 - [ ] ~~Page title updates as user moves up/down the page~~
 - [ ] Adjust `<a>` tags to point to actual links

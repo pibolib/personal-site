@@ -3,18 +3,19 @@
 // stuff related to works section
 const works = [
 ["title","type","year","month","indev","link","image"],
-["WeeklyBeats 2022 Highlights","Music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","#"],
-["WeeklyBeats 2022","Music","2022","12","N","https://weeklybeats.com/pibolib?s=&f=8&y=2022","#"],
-["TSUNAGARI TOWER: Phoebe's Ascent","Game","2022","7","N","https://pibolib.itch.io/tsunagari-tower","#"],
-["Trung Sisters","Game","2022","1","N","https://pibolib.itch.io/trung-sisters","#"],
-["未来よりMESSAGE","Music","2021","12","N","https://pibolib.bandcamp.com/album/message","#"],
-["GemStreak: Curse of the Time Machine","Game","2021","7","N","https://pibolib.itch.io/gemstreak","#"],
-["永遠にPROGRESS","Music","2021","3","N","https://pibolib.bandcamp.com/album/progress","./assets/eienniprogresscover.png"]
+["WeeklyBeats 2022 Highlights","music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","#"],
+["WeeklyBeats 2022","music","2022","12","N","https://weeklybeats.com/pibolib?s=&f=8&y=2022","#"],
+["TSUNAGARI TOWER: Phoebe's Ascent","game","2022","7","N","https://pibolib.itch.io/tsunagari-tower","#"],
+["Trung Sisters","game","2022","1","N","https://pibolib.itch.io/trung-sisters","#"],
+["未来よりMESSAGE","music","2021","12","N","https://pibolib.bandcamp.com/album/message","#"],
+["GemStreak: Curse of the Time Machine","game","2021","7","N","https://pibolib.itch.io/gemstreak","#"],
+["永遠にPROGRESS","music","2021","3","N","https://pibolib.bandcamp.com/album/progress","./assets/eienniprogresscover.png"]
 ];
 const worksJSON = arrayToObject(works);
 const currentDate = new Date()
 const currentYear = currentDate.getFullYear();
 var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
+
 
 createWorkSections();
 createWorks();
@@ -72,7 +73,6 @@ function createWorkSections() {
         div.appendChild(hbar);
         div.appendChild(workContainerDiv);
         worksDiv.appendChild(div);
-        //console.log(year);
     }
 }
 
@@ -88,7 +88,7 @@ function getEarliestYear(jsonArray, compareYear) {
 
 function createWorkCard(title, type, year, month, indev, link, image) {
     var div = document.createElement("div");
-    div.classList.add([type,indev,"work","card"]);
+    div.classList.add(type,indev,"work","card");
     var a = document.createElement("a");
     a.setAttribute('href',link);
     a.setAttribute('target',"_blank");
@@ -120,4 +120,11 @@ function arrayToObject(arr) {
 			formatted.push(o);
 	}
 	return formatted;
+}
+
+function toggleWorkCategory(tag) {
+    for(element of document.getElementsByClassName(tag)) {
+        element.classList.toggle("hide");
+    }
+    document.getElementById("work-toggle-"+tag).classList.toggle("bold");
 }
