@@ -1,3 +1,6 @@
+
+
+// stuff related to works section
 const works = [
 ["title","type","year","month","indev","link","image"],
 ["WeeklyBeats 2022 Highlights","Music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","#"],
@@ -15,6 +18,36 @@ var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
 
 createWorkSections();
 createWorks();
+
+//stuff related to rss feed
+
+const rssConfig = {
+    limit: 10,
+    offsetStart: false,
+    offsetEnd: false, 
+    ssl: true,
+    host: "feedrapp.info", // currently using feedr's public instance, may switch in the future
+    support: false,
+    layoutTemplate: "<div class='rss-feed-container'>{entries}</div>",
+    entryTemplate: "<h3>{title}</h3><p>{date} <br></p><p class='post-body-short'>{shortBodyPlain} <a onclick='expandPost(this)'>(expand post)</a></p><div class='post-body-long hide'>{body} <a onclick='closePost(this)'> (close post)</a></div>",
+    dateFormat: "YYYY/MM/DD @ HH:MM",
+}
+
+jQuery(function($) {
+    $("#rss-feeds").rss("https://pibolib-rss.blogspot.com/feeds/posts/default?alt=rss",rssConfig);
+});
+
+// function dump
+
+function expandPost(post) {
+    post.parentElement.classList.add("hide");
+    post.parentElement.nextSibling.classList.remove("hide");
+}
+
+function closePost(post) {
+    post.parentElement.classList.add("hide");
+    post.parentElement.previousSibling.classList.remove("hide");
+}
 
 function createWorks() {
     for(work of worksJSON) {

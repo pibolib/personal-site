@@ -8,8 +8,9 @@ Built using HTML, CSS, JS + jQuery.
 - [x] Primarily single-page design with scroll snapping
 - [ ] Responsive design
 - [ ] RSS feed parser for blog posts (reads off of pibolib's Blogger blog)
-    - [ ] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
+    - [x] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
     - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires Liliumbot to be created.
+    - [ ] Sort blog posts by title categories.
 - [ ] Fancy works display
     - [ ] ~~JQuery parses CSV into JSON.~~
     - [x] Array parsed into JSON is read to create HTML elements.
@@ -17,7 +18,9 @@ Built using HTML, CSS, JS + jQuery.
         - [x] Works render in the respective section.
         - [x] Each section contains a list of works with classes based on the desired tags.        
     - [ ] Works have images.
+    - [ ] Sort works by tags.
 - [ ] Page translation systems
 - [ ] ~~Page title updates as user moves up/down the page~~
+- [ ] Adjust `<a>` tags to point to actual links
 
 ### [Site Design Document](https://www.figma.com/file/jHVir8MYgrJfB8123VqQdz/Personal-Site-Design-v1.6?node-id=0%3A1&t=L1pWkhyKKDyjvGvK-1)

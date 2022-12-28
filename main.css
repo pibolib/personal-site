@@ -80,6 +80,10 @@ li a{
     background: linear-gradient(180deg, rgba(0,21,61,1), rgba(0,13,38,1));
 }
 
+.hide {
+    display: none;
+}
+
 #contact {
     background: linear-gradient(180deg, rgba(0,13,38,1), rgba(0,0,0,1));
 }
