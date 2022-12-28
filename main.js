@@ -4,10 +4,10 @@
 const works = [
 ["title","type","year","month","indev","link","image"],
 ["WeeklyBeats 2022 Highlights","music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","#"],
-["WeeklyBeats 2022","music","2022","12","N","https://weeklybeats.com/pibolib?s=&f=8&y=2022","#"],
+["WeeklyBeats 2022","music","2022","12","N","https://weeklybeats.com/pibolib?s=&f=8&y=2022","./assets/weeklybeats22cover.png"],
 ["TSUNAGARI TOWER: Phoebe's Ascent","game","2022","7","N","https://pibolib.itch.io/tsunagari-tower","#"],
 ["Trung Sisters","game","2022","1","N","https://pibolib.itch.io/trung-sisters","#"],
-["未来よりMESSAGE","music","2021","12","N","https://pibolib.bandcamp.com/album/message","#"],
+["未来よりMESSAGE","music","2021","12","N","https://pibolib.bandcamp.com/album/message","./assets/miraiyorimessagecover.png"],
 ["GemStreak: Curse of the Time Machine","game","2021","7","N","https://pibolib.itch.io/gemstreak","#"],
 ["永遠にPROGRESS","music","2021","3","N","https://pibolib.bandcamp.com/album/progress","./assets/eienniprogresscover.png"]
 ];
@@ -93,6 +93,9 @@ function createWorkCard(title, type, year, month, indev, link, image) {
     a.setAttribute('href',link);
     a.setAttribute('target',"_blank");
     var img = document.createElement("img");
+    if(image == "#") {
+        image = "./assets/noimagedefault.png";
+    }
     img.setAttribute('src',image);
     img.classList.add("work-img");
     a.appendChild(img);

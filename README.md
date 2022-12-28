@@ -10,10 +10,14 @@ jquery-rss: https://github.com/sdepold/jquery-rss
 ### Site Specifications
 
 - [x] Primarily single-page design with scroll snapping
-- [ ] Responsive design
+- [x] Responsive design
+- [ ] Fancy stuff
+    - [ ] Star particles that become more evident as the user scrolls down the page.
+    - [ ] Hanging clocks from the 時空Δ page.
+    - [ ] Door that opens when the user mouses over it on the 時空Δ page.
 - [ ] RSS feed parser for blog posts (reads off of pibolib's Blogger blog)
     - [x] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
-    - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires Liliumbot to be created.
+    - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires discord bot.
     - [ ] Sort blog posts by title categories.
 - [ ] Fancy works display
     - [x] Array parsed into JSON is read to create HTML elements.
