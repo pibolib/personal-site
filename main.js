@@ -1,5 +1,3 @@
-
-
 // stuff related to works section
 const works = [
 ["title","type","year","month","indev","link","image"],
@@ -15,23 +13,48 @@ const worksJSON = arrayToObject(works);
 const currentDate = new Date()
 const currentYear = currentDate.getFullYear();
 var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
-
-
+//var validYears = Array.from(new Array(2023-currentYear), (x,i) => i + 2022);
+//var selectedMonth = currentDate.getMonth()+1;
 createWorkSections();
 createWorks();
+//createMonthSelectors(selectedMonth);
+
 
 //stuff related to rss feed
 
 const rssConfig = {
-    limit: 10,
+    limit: 100,
     offsetStart: false,
     offsetEnd: false, 
     ssl: true,
     host: "feedrapp.info", // currently using feedr's public instance, may switch in the future
     support: false,
     layoutTemplate: "<div class='rss-feed-container'>{entries}</div>",
-    entryTemplate: "<h3>{title}</h3><p>{date} <br></p><p class='post-body-short'>{shortBodyPlain} <a onclick='expandPost(this)'>(expand post)</a></p><div class='post-body-long hide'>{body} <a onclick='closePost(this)'> (close post)</a></div>",
+    entryTemplate: "<div class={category}><h2>{strippedTitle}</h2><p>{date} <br></p><p class='post-body-short'>{shortBodyPlain}<a onclick='expandPost(this)'>... (expand post)</a></p><div class='post-body-long hide'>{body} <a onclick='closePost(this)'> (close post)</a></div><div>",
     dateFormat: "YYYY/MM/DD @ HH:MM",
+    tokens: {
+        category: function(entry, tokens) {
+            if(entry.title.startsWith("GENERAL:")){
+                return "blog-category-general";
+            }
+            else if(entry.title.startsWith("CREATION:")){
+                return "blog-category-creation";
+            }
+            else if(entry.title.startsWith("DEVLOG:")){
+                return "blog-category-devlog";
+            }
+            return "blog-category-none";
+        },
+        strippedTitle: function(entry, tokens) {
+            return entry.title.replace("GENERAL:","").replace("CREATION:","").replace("DEVLOG:","");
+        },
+        dateYear: function(entry, tokens) {
+            return entry.date.getFullYear();
+        },
+        dateMonth: function(entry, tokens) {
+            return entry.date.getMonth()+1; 
+        }
+    },
 }
 
 jQuery(function($) {
@@ -39,6 +62,34 @@ jQuery(function($) {
 });
 
 // function dump
+/*
+function createMonthSelectors(selectMonth) {
+    var p = document.createElement("p");
+    var pBaseText = document.createTextNode("Month: ");
+    p.appendChild(pBaseText);
+    for(var i = 1; i<=12; i++) {
+        var a = document.createElement("a");
+        a.setAttribute('id',"month-"+i)
+        a.setAttribute('onclick',"selectMonth("+i+")");
+        a.classList.add("blog-month");
+        if(i == selectMonth) {
+            a.classList.add("bold");
+        }
+        var thisMonth = document.createTextNode(i);
+        a.appendChild(thisMonth);
+        var bar = document.createTextNode(" | ");
+        p.appendChild(a);
+        if(i != 12){
+            p.appendChild(bar);
+        }
+    }
+    document.getElementById("blog-select-month").appendChild(p);
+}
+
+function selectMonth(month) {
+
+}
+*/
 
 function expandPost(post) {
     post.parentElement.classList.add("hide");
@@ -130,4 +181,11 @@ function toggleWorkCategory(tag) {
         element.classList.toggle("hide");
     }
     document.getElementById("work-toggle-"+tag).classList.toggle("bold");
+}
+
+function toggleBlogCategory(tag) {
+    for(element of document.getElementsByClassName("blog-category-"+tag)) {
+        element.classList.toggle("hide");
+    }
+    document.getElementById("blog-toggle-"+tag).classList.toggle("bold");
 }

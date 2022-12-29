@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6, p {
 li a{
     text-decoration: none;
     filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
+    color: white;
 }
 
 p, li{
@@ -107,6 +108,10 @@ hr {
 
 #blog {
     background: linear-gradient(180deg, rgba(0,21,61,1), rgba(0,13,38,1));
+}
+
+.post-body-long a {
+    font-size: 16pt;
 }
 
 .hide {
