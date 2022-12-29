@@ -19,12 +19,12 @@ jquery-rss: https://github.com/sdepold/jquery-rss
     - [x] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
     - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires discord bot.
     - [ ] Sort blog posts by title categories.
-- [ ] Fancy works display
+- [x] Fancy works display
     - [x] Array parsed into JSON is read to create HTML elements.
         - [x] Sections are created for each year.
         - [x] Works render in the respective section.
         - [x] Each section contains a list of works with classes based on the desired tags.        
-    - [ ] Works have images.
+    - [x] Works have images.
     - [x] Sort works by tags.
 - [ ] Page translation systems
 - [ ] ~~Page title updates as user moves up/down the page~~
