@@ -18,7 +18,8 @@ jquery-rss: https://github.com/sdepold/jquery-rss
 - [ ] RSS feed parser for blog posts (reads off of pibolib's Blogger blog)
     - [x] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
     - [ ] MAYBE: Comments handled through Discord server threads for additional connectivity. Requires discord bot.
-    - [ ] Sort blog posts by title categories.
+    - [ ] Filter posts by tag.
+    - [ ] Filter posts by date.
 - [x] Fancy works display
     - [x] Array parsed into JSON is read to create HTML elements.
         - [x] Sections are created for each year.
