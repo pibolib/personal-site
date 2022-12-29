@@ -3,12 +3,12 @@
 // stuff related to works section
 const works = [
 ["title","type","year","month","indev","link","image"],
-["WeeklyBeats 2022 Highlights","music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","#"],
+["WeeklyBeats 2022 Highlights","music","2023","1","Y","https://pibolib.bandcamp.com/album/weeklybeats-2022-highlights","./assets/weeklybeats22highlightscover.png"],
 ["WeeklyBeats 2022","music","2022","12","N","https://weeklybeats.com/pibolib?s=&f=8&y=2022","./assets/weeklybeats22cover.png"],
-["TSUNAGARI TOWER: Phoebe's Ascent","game","2022","7","N","https://pibolib.itch.io/tsunagari-tower","#"],
-["Trung Sisters","game","2022","1","N","https://pibolib.itch.io/trung-sisters","#"],
+["TSUNAGARI TOWER: Phoebe's Ascent","game","2022","7","N","https://pibolib.itch.io/tsunagari-tower","./assets/tsunagaritowercover.png"],
+["Trung Sisters","game","2022","1","N","https://pibolib.itch.io/trung-sisters","./assets/trungsisterscover.png"],
 ["未来よりMESSAGE","music","2021","12","N","https://pibolib.bandcamp.com/album/message","./assets/miraiyorimessagecover.png"],
-["GemStreak: Curse of the Time Machine","game","2021","7","N","https://pibolib.itch.io/gemstreak","#"],
+["GemStreak: Curse of the Time Machine","game","2021","7","N","https://pibolib.itch.io/gemstreak","./assets/gemstreakcover.png"],
 ["永遠にPROGRESS","music","2021","3","N","https://pibolib.bandcamp.com/album/progress","./assets/eienniprogresscover.png"]
 ];
 const worksJSON = arrayToObject(works);
