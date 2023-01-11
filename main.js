@@ -13,11 +13,8 @@ const worksJSON = arrayToObject(works);
 const currentDate = new Date()
 const currentYear = currentDate.getFullYear();
 var worksEarliestYear = getEarliestYear(worksJSON, currentYear);
-//var validYears = Array.from(new Array(2023-currentYear), (x,i) => i + 2022);
-//var selectedMonth = currentDate.getMonth()+1;
 createWorkSections();
 createWorks();
-//createMonthSelectors(selectedMonth);
 
 
 //stuff related to rss feed
@@ -30,7 +27,7 @@ const rssConfig = {
     host: "feedrapp.info", // currently using feedr's public instance, may switch in the future
     support: false,
     layoutTemplate: "<div class='rss-feed-container'>{entries}</div>",
-    entryTemplate: "<div class={category}><h2>{strippedTitle}</h2><p>{date} <br></p><p class='post-body-short'>{shortBodyPlain}<a onclick='expandPost(this)'>... (expand post)</a></p><div class='post-body-long hide'>{body} <a onclick='closePost(this)'> (close post)</a></div><div>",
+    entryTemplate: "<div class={category}><h2>{strippedTitle}</h2><p>{date} <br></p><p class='post-body-short'>{shortBodyPlain}<a class='blog-post-visibility-toggle' onclick='expandPost(this)'>... (expand post)</a></p><div class='post-body-long hide'>{body} <a class='blog-post-visibility-toggle' onclick='closePost(this)'> (close post)</a></div><div>",
     dateFormat: "YYYY/MM/DD @ HH:MM",
     tokens: {
         category: function(entry, tokens) {
@@ -61,35 +58,7 @@ jQuery(function($) {
     $("#rss-feeds").rss("https://pibolib-rss.blogspot.com/feeds/posts/default?alt=rss",rssConfig);
 });
 
-// function dump
-/*
-function createMonthSelectors(selectMonth) {
-    var p = document.createElement("p");
-    var pBaseText = document.createTextNode("Month: ");
-    p.appendChild(pBaseText);
-    for(var i = 1; i<=12; i++) {
-        var a = document.createElement("a");
-        a.setAttribute('id',"month-"+i)
-        a.setAttribute('onclick',"selectMonth("+i+")");
-        a.classList.add("blog-month");
-        if(i == selectMonth) {
-            a.classList.add("bold");
-        }
-        var thisMonth = document.createTextNode(i);
-        a.appendChild(thisMonth);
-        var bar = document.createTextNode(" | ");
-        p.appendChild(a);
-        if(i != 12){
-            p.appendChild(bar);
-        }
-    }
-    document.getElementById("blog-select-month").appendChild(p);
-}
-
-function selectMonth(month) {
-
-}
-*/
+//function dump
 
 function expandPost(post) {
     post.parentElement.classList.add("hide");
@@ -111,7 +80,7 @@ function createWorks() {
 
 function createWorkSections() {
     const worksDiv = document.getElementById("works-div");
-    for(var year = currentYear+1; year >= worksEarliestYear; year--) {
+    for(var year = currentYear; year >= worksEarliestYear; year--) {
         var div = document.createElement("div");
         var title = document.createElement("h3");
         var textData = document.createTextNode(year);

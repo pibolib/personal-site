@@ -14,12 +14,12 @@ jquery-rss: https://github.com/sdepold/jquery-rss
 - [x] Primarily single-page design with scroll snapping
 - [x] Responsive design
 - [ ] Fancy stuff
-    - [ ] Star particles that become more evident as the user scrolls down the page.
-    - [ ] Hanging clocks from the 時空Δ page.
-    - [ ] Door that opens when the user mouses over it on the 時空Δ page.
-    - [ ] General CSS beautification.
-- [ ] Page translation systems
-    - [ ] JP translation
+    - #9
+    - #10
+    - #11
+    - #12
+- #13
+    - #14
 - [x] Fancy works display
     - [x] Array parsed into JSON is read to create HTML elements.
         - [x] Sections are created for each year.
@@ -30,8 +30,8 @@ jquery-rss: https://github.com/sdepold/jquery-rss
 - [x] RSS feed parser for blog posts (reads off of pibolib's Blogger blog)
     - [x] Figure out and implement https://github.com/sdepold/jquery-rss connected to Blogger rss feed.
     - [x] Filter posts by tag.
-    - [ ] ~~Filter posts by date.~~
-    - [ ] *MAYBE POST-RELEASE: Show posts with offset. (i.e. show posts 100-200)* 
-    - [ ] *MAYBE POST-RELEASE: Comments handled through Discord server threads for additional connectivity. Requires discord bot.*
+    - #15
+    - #16
+    - #17
 
 ### [Site Design Document](https://www.figma.com/file/jHVir8MYgrJfB8123VqQdz/Personal-Site-Design-v1.6?node-id=0%3A1&t=L1pWkhyKKDyjvGvK-1)
