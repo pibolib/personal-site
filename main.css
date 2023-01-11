@@ -110,7 +110,7 @@ hr {
     background: linear-gradient(180deg, rgba(0,21,61,1), rgba(0,13,38,1));
 }
 
-.post-body-long a {
+.blog-post-visibility-toggle {
     font-size: 16pt;
 }
 
