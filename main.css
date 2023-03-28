@@ -1,131 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap');
+
+:root {
+    --color-text-main: #FFFFFF;
+    --color-text-sub: #FFFFFF47;
+    --color-div-bg: #14141F;
+    --color-div-tab-unselected: #181825;
+    --color-div-tab-selected: #1E1E2F;
+    --color-div-section: #31314D;
+    --color-accent-work-unfinished: #F45959;
+    --color-accent-work-finished: #87CEFA;
+    --font-size-title: 45px;
+    --font-size-tab: 30px;
+    --font-size-work-title: 24px;
+    --font-size-work-subtitle: 21px;
+    --font-size-default-text: 21px;
+}
+
 * {
     font-family: 'Zen Maru Gothic', 'Jura';
     color: white;
     text-decoration: none;
 }
 
-a:hover {
-    cursor: pointer;
-}
-
-html {
-    scroll-snap-type: y proximity;
-}
-
 body {
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 15px;
+    background-color: var(--color-div-bg);
 }
 
-.flexbox {
-    min-height: 100%;
+.main {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--color-div-tab-selected);
+    max-width: 100%;
+    padding: 15px;
 }
 
-section {
-    min-height: 100vh;
+#top {
     width: 100%;
-    scroll-snap-align: start;
-    padding: 1%;
+    height: 12%;
+    margin-bottom: 15px;
+    font-size: var(--font-size-title);
 }
 
-#main {
-    background: linear-gradient(180deg, #6D9FFF 0%, #769CE7 42.19%, #4068B7 72.39%, #194496 72.4%, #00256C 100%);
-}
-
-.logo {
-    width:300px;
-    filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
-}
-
-li a{
-    text-decoration: none;
-    filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
-    color: white;
-}
-
-p, li{
-    font-size: 16pt;
-}
-
-#zikuudelta-link {
-    color: yellow;
-}
-
-#about {
-    background: linear-gradient(180deg, rgba(0,37,108,1), rgba(0,25,72,1));
-}
-
-#works {
-    background: linear-gradient(180deg, rgba(0,25,72,1), rgba(0,21,61,1));
-}
-
-.work-flexbox {
+#tab-holder {
+    height: 8%;
+    max-height: 8%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-flow: row nowrap;
+    /*overflow-x: scroll;
+    overflow-y: hidden;*/
+    gap: 5px;
+}
+
+.tab {
+    /* flex-grow: 1; */
+    width: calc(69px * 1.5); /* nice */
+    height: 100%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    background-color: var(--color-div-tab-unselected);
+    text-align: center;
+    font-size: var(--font-size-tab);
+}
+
+.tab-selected {
+    background-color: var(--color-div-tab-selected);
 }
 
 .work {
-    min-height: 300px;
-    max-width: 225px;
-    background-color: #333333;
-    filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;   
+    background-color: var(--color-div-section);
+    min-height:calc(55px*1.5);
+    padding: 6px 8px;
+}
+
+.work-title {
+    font-size: var(--font-size-work-title);
+}
+
+.work-subtitle {
+    margin-top: -20px;
+    width: 80%;
+    max-width: 80%;
+    font-size: var(--font-size-work-subtitle);
+}
+
+.work-date {
+    color: var(--color-text-sub);
+}
+
+.work-accent {
     margin-top: 10px;
+    margin-left: -8px;
+    margin-bottom: -6px;
+    width: calc(100% + 16px);
+    height: 9px;
+    align-self: flex-end;
 }
 
-.work p {
-    margin-left: 6px;
-    margin-right: 6px;
-    margin-top: -4px;
+.unfinished {
+    background-color: var(--color-accent-work-unfinished);
 }
 
-.work-img {
-    width: 225px;
-    max-width: 225px;
-    height: 225px;
-    max-height: 225px;
-}
-
-hr {
-    filter: drop-shadow(0px 5px 1px rgba(0,0,0,0.40));
-}
-
-#blog {
-    background: linear-gradient(180deg, rgba(0,21,61,1), rgba(0,13,38,1));
-}
-
-.blog-post-visibility-toggle {
-    font-size: 16pt;
-}
-
-.hide {
-    display: none;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-#contact {
-    background: linear-gradient(180deg, rgba(0,13,38,1), rgba(0,0,0,1));
-}
-
-#zikuudelta {
-    background-color: black;
+.finished {
+    background-color: var(--color-accent-work-finished);
 }
