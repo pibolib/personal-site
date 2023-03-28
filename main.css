@@ -43,12 +43,11 @@ body {
 }
 
 #tab-holder {
+    overflow-x: auto;
     height: 8%;
     max-height: 8%;
     display: flex;
     flex-flow: row nowrap;
-    /*overflow-x: scroll;
-    overflow-y: hidden;*/
     gap: 5px;
 }
 
@@ -61,6 +60,7 @@ body {
     background-color: var(--color-div-tab-unselected);
     text-align: center;
     font-size: var(--font-size-tab);
+    white-space: nowrap;
 }
 
 .tab-selected {
