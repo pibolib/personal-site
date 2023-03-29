@@ -33,6 +33,7 @@ body {
     background-color: var(--color-div-tab-selected);
     max-width: 100%;
     padding: 15px;
+    gap: 15px;
 }
 
 #top {
@@ -93,7 +94,7 @@ body {
 
 .work-accent {
     margin-top: 10px;
-    margin-left: -8px;
+    margin-right: -8px;
     margin-bottom: -6px;
     width: calc(100% + 16px);
     height: 9px;
@@ -106,4 +107,12 @@ body {
 
 .finished {
     background-color: var(--color-accent-work-finished);
+}
+
+.en {
+    display: auto;
+}
+
+.jp {
+    display: none;
 }
