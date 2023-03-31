@@ -113,11 +113,43 @@ const worksMusic = [
     {
         name: "TSUNAGARI TOWER: Phoebe's Ascent OST",
         date: "2023",
-        description: "The full soundtrack to TSUNAGARI TOWER: Phoebe's Ascent.",
+        description: "The full soundtrack of TSUNAGARI TOWER: Phoebe's Ascent.",
         descriptionJP: "TSUNAGARI TOWER: Phoebe's Ascentのサウンドトラックです。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/tsunagari-tower-phoebes-ascent-ost","youtube","https://www.youtube.com/watch?v=iTYfPnUF-Z4")],
         completionStatus: true
     },
+    {
+        name: "Trung Sisters OST",
+        date: "2022",
+        description: "The full soundtrack of Trung Sisters.",
+        descriptionJP: "Trung Sistersのサウンドトラックです。",
+        links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/trung-sisters-ost")],
+        completionStatus: true
+    },
+    {
+        name: "未来よりMESSAGE",
+        date: "2021",
+        description: "My second album, containing remixes and new tracks.",
+        descriptionJP: "第二作のアルバムです。新しい曲とリミックスが入っています。",
+        links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/message")],
+        completionStatus: true
+    },
+    {
+        name: "GemStreak: Curse of the Time Machine OST",
+        date: "2021",
+        description: "The full soundtrack of GemStreak: Curse of the Time Machine.",
+        descriptionJP: "GemStreak: Curse of the Time Machineのサウンドトラックです。",
+        links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/gemstreak-curse-of-the-time-machine-ost")],
+        completionStatus: true
+    },
+    {
+        name: "永遠にPROGRESS",
+        date: "2021",
+        description: "My first album. Contains various tracks I was working on at the time.",
+        descriptionJP: "第一作のアルバムです。いろいろな曲が入っています。",
+        links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/progress")],
+        completionStatus: true
+    }
 ];
 
 const worksOther = [
