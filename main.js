@@ -110,13 +110,38 @@ const worksGames = [
 ];
 
 const worksMusic = [
-
+    {
+        name: "TSUNAGARI TOWER: Phoebe's Ascent OST",
+        date: "2023",
+        description: "The full soundtrack to TSUNAGARI TOWER: Phoebe's Ascent.",
+        descriptionJP: "TSUNAGARI TOWER: Phoebe's Ascentのサウンドトラックです。",
+        links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/tsunagari-tower-phoebes-ascent-ost","youtube","https://www.youtube.com/watch?v=iTYfPnUF-Z4")],
+        completionStatus: true
+    },
 ];
 
 const worksOther = [
 
 ];
 
+const themes = {
+    dark: {
+        colorTextMain: "#FFFFFF",
+        colorTextSub: "#FFFFFF47",
+        colorDivBG: "#14141F",
+        colorDivTabUnselected: "#181825",
+        colorDivTabSelected: "#1E1E2F",
+        colorDivSection: "#31314D"
+    },
+    light: {
+        //tbd
+    }
+};
+
 const worksGamesContainer = createSection("games", worksGames);
+const worksMusicContainer = createSection("music", worksMusic);
+const worksOtherContainer = createSection("other", worksOther);
 const home = document.getElementById("home");
 home.appendChild(worksGamesContainer);
+home.appendChild(worksMusicContainer);
+home.appendChild(worksOtherContainer);
