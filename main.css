@@ -68,6 +68,10 @@ body {
     background-color: var(--color-div-tab-selected);
 }
 
+.inactive {
+    display: none;
+}
+
 .work {
     display: flex;
     flex-direction: column;

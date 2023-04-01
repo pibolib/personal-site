@@ -20,13 +20,26 @@ class Link {
 
 //takes a string, returns none
 function switchActiveSection(newSection) {
-    
+    const tabs = document.getElementsByClassName("tab");
+    const sections = document.getElementsByClassName("main");
+    for(var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("tab-selected");
+        if (tabs[i].id == newSection) {
+            tabs[i].classList.add("tab-selected");
+        }
+    }
+    for(var i = 0; i < sections.length; i++) {
+        sections[i].classList.add("inactive");
+        if (sections[i].classList.contains(newSection)) {
+            sections[i].classList.remove("inactive");
+        }
+    }
 }
 
 //takes a string and a list of Work objects, returns a section container
 function createSection(name, contents) {
     const container = document.createElement("div");
-    container.id = name;
+    container.classList.add(name);
     container.classList.add("main");
     for(var i = 0; i < contents.length; i++) {
         const workContainer = createWorkContainer(contents[i]);
@@ -153,7 +166,14 @@ const worksMusic = [
 ];
 
 const worksOther = [
-
+    {
+        name: "Personal Site",
+        date: "2020-23",
+        description: "My personal portfolio site.",
+        descriptionJP: "私のホームページです。",
+        links: [],
+        completionStatus: true
+    }
 ];
 
 const themes = {
@@ -177,3 +197,4 @@ const home = document.getElementById("home");
 home.appendChild(worksGamesContainer);
 home.appendChild(worksMusicContainer);
 home.appendChild(worksOtherContainer);
+switchActiveSection("games");
