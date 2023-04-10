@@ -18,7 +18,7 @@
 
 * {
     font-family: 'Zen Maru Gothic', 'Jura';
-    color: white;
+    color: var(--color-text-main);
     text-decoration: none;
 }
 

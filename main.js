@@ -87,6 +87,16 @@ function createSpan(text, classes) {
     return span;
 }
 
+function switchTheme(themeJSON) {
+    const r = document.querySelector(":root");
+    r.style.setProperty("--color-text-main", themeJSON.colorTextMain);
+    r.style.setProperty("--color-text-sub", themeJSON.colorTextSub);
+    r.style.setProperty("--color-div-bg", themeJSON.colorDivBG);
+    r.style.setProperty("--color-div-tab-unselected", themeJSON.colorDivTabUnselected);
+    r.style.setProperty("--color-div-tab-selected", themeJSON.colorDivTabSelected);
+    r.style.setProperty("--color-div-section", themeJSON.colorDivSection);
+}
+
 const worksGames = [
     {
         name: "???",
@@ -186,7 +196,12 @@ const themes = {
         colorDivSection: "#31314D"
     },
     light: {
-        //tbd
+        colorTextMain: "#000000",
+        colorTextSub: "#00000047",
+        colorDivBG: "#D5D4FC",
+        colorDivTabUnselected: "#C7C6F2",
+        colorDivTabSelected: "#B3B2D8",
+        colorDivSection: "#9E9DBF"
     }
 };
 
