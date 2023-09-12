@@ -16,6 +16,21 @@
     --font-size-default-text: 21px;
 }
 
+hr {
+    width: 100%;
+}
+
+h1 {
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: var(--font-size-default-text);
+}
+
 * {
     font-family: 'Zen Maru Gothic', 'Jura';
     color: var(--color-text-main);
@@ -105,6 +120,10 @@ body {
     align-self: flex-end;
 }
 
+.no-work {
+    width: 100%;
+}
+
 .unfinished {
     background-color: var(--color-accent-work-unfinished);
 }
@@ -113,10 +132,3 @@ body {
     background-color: var(--color-accent-work-finished);
 }
 
-.en {
-    display: auto;
-}
-
-.jp {
-    display: none;
-}

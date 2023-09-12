@@ -1,11 +1,8 @@
-// TODO: write this
-
 class Work {
-    constructor(name, date, description, descriptionJP, links, completionStatus) {
+    constructor(name, date, description, links, completionStatus) {
         this.name = name; //a string
         this.date = date; //a string
         this.description = description; //a string
-        this.descriptionJP = descriptionJP; //a string
         this.links = links; //an array of Link objects
         this.completionStatus = completionStatus; //a boolean
     }
@@ -59,9 +56,7 @@ function createWorkContainer(workJSON) {
     container.appendChild(br);
     const descriptionDiv = document.createElement("div");
     const description = createSpan(workJSON.description, "en");
-    const descriptionJP = createSpan(workJSON.descriptionJP, "jp");
     descriptionDiv.appendChild(description);
-    descriptionDiv.appendChild(descriptionJP);
     container.appendChild(descriptionDiv);
     const accentDiv = document.createElement("div");
     accentDiv.classList.add("work-accent");
@@ -99,18 +94,23 @@ function switchTheme(themeJSON) {
 
 const worksGames = [
     {
-        name: "???",
+        name: "TSUNAGARI TOWER",
         date: "TBD",
         description: "In progress. More information to come soon.",
-        descriptionJP: "開発中です。詳しくはまだ決まっていません。",
         links: [],
         completionStatus: false
+    },
+    {
+        name: "Coin Flip Magicks",
+        date: "2023",
+        description: "A top-down action game developed in Godot 4.1 for Windows. Solo developed by pibolib for Mini Jam 139.",
+        links: [new Link("github","https://github.com/pibolib/coin-flip-magicks"), new Link("itchio","https://pibolib.itch.io/coin-flip-magicks")],
+        completionStatus: true
     },
     {
         name: "TSUNAGARI TOWER: Phoebe's Ascent",
         date: "2022-23",
         description: "A puzzle game developed in Godot 3.5. Solo developed by pibolib, originally for GMTK Game Jam 2022.",
-        descriptionJP: "Godot 3.5で開発されたパズルゲームです。自作ゲームです。元GMTK Game Jam 2022のゲームでした。",
         links: [new Link("github","https://github.com/pibolib/tsunagari-tower"), new Link("itchio","https://pibolib.itch.io/tsunagari-tower")],
         completionStatus: true
     },
@@ -118,7 +118,6 @@ const worksGames = [
         name: "Trung Sisters",
         date: "2022",
         description: "A strategy game developed in Godot 3.4. Developed with my brother for Historically Accurate Game Jam 5.",
-        descriptionJP:"Godot 3.4で開発されたストラテジーゲームです。Historically Accurate Game Jamのためのゲームです。リードプログラマーでした。",
         links: [new Link("github","https://github.com/pibolib/trung-sisters"), new Link("itchio","https://pibolib.itch.io/trung-sisters")],
         completionStatus: true
     },
@@ -126,7 +125,6 @@ const worksGames = [
         name: "GemStreak: Curse of the Time Machine",
         date: "2021",
         description: "A puzzle game developed in Godot 3.2. Developed with friends for Godot Wild Jam #35.",
-        descriptionJP: "Godot 3.2で開発されたパズルゲームです。Godot Wild Jam #35のためのゲームでした。リードデザイナーとリードプログラマーでした。",
         links: [new Link("github","https://github.com/pibolib/gemstreak"), new Link("itchio","https://pibolib.itch.io/gemstreak")],
         completionStatus: true
     }
@@ -134,18 +132,30 @@ const worksGames = [
 
 const worksMusic = [
     {
+        name: "fantasy_contradiction",
+        date: "2023",
+        description: "My third album, the first to be released on Spotify and other streaming platforms.",
+        links: [new Link("bandcamp", "https://pibolib.bandcamp.com/album/fantasy-contradiction"), new Link("spotify", "https://open.spotify.com/album/5LJPaYc5ZXHzxbH2NWrPvO")],
+        completionStatus: true
+    },
+    {
         name: "TSUNAGARI TOWER: Phoebe's Ascent OST",
         date: "2023",
         description: "The full soundtrack of TSUNAGARI TOWER: Phoebe's Ascent.",
-        descriptionJP: "TSUNAGARI TOWER: Phoebe's Ascentのサウンドトラックです。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/tsunagari-tower-phoebes-ascent-ost","youtube","https://www.youtube.com/watch?v=iTYfPnUF-Z4")],
+        completionStatus: true
+    },
+    {
+        name: "WeeklyBeats 2022",
+        date: "2022",
+        description: "A challenge I participated in throughout 2022, where participants were challenged to produce one track per week.",
+        links: [new Link("generic","https://weeklybeats.com/pibolib?s=&f=8&y=2022")],
         completionStatus: true
     },
     {
         name: "Trung Sisters OST",
         date: "2022",
         description: "The full soundtrack of Trung Sisters.",
-        descriptionJP: "Trung Sistersのサウンドトラックです。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/trung-sisters-ost")],
         completionStatus: true
     },
@@ -153,7 +163,6 @@ const worksMusic = [
         name: "未来よりMESSAGE",
         date: "2021",
         description: "My second album, containing remixes and new tracks.",
-        descriptionJP: "第二作のアルバムです。新しい曲とリミックスが入っています。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/message")],
         completionStatus: true
     },
@@ -161,7 +170,6 @@ const worksMusic = [
         name: "GemStreak: Curse of the Time Machine OST",
         date: "2021",
         description: "The full soundtrack of GemStreak: Curse of the Time Machine.",
-        descriptionJP: "GemStreak: Curse of the Time Machineのサウンドトラックです。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/gemstreak-curse-of-the-time-machine-ost")],
         completionStatus: true
     },
@@ -169,7 +177,6 @@ const worksMusic = [
         name: "永遠にPROGRESS",
         date: "2021",
         description: "My first album. Contains various tracks I was working on at the time.",
-        descriptionJP: "第一作のアルバムです。いろいろな曲が入っています。",
         links: [new Link("bandcamp","https://pibolib.bandcamp.com/album/progress")],
         completionStatus: true
     }
@@ -180,9 +187,18 @@ const worksOther = [
         name: "Personal Site",
         date: "2020-23",
         description: "My personal portfolio site.",
-        descriptionJP: "私のホームページです。",
         links: [],
         completionStatus: true
+    }
+];
+
+const worksZikuu = [
+    {
+        name: "Bringers of Light",
+        date: "2023",
+        description: "A team consisting of 時空Δ and Mamoriya, producing BMS for BOF2023.",
+        links: [new Link("generic", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126")],
+        completionStatus: false,
     }
 ];
 
@@ -208,8 +224,10 @@ const themes = {
 const worksGamesContainer = createSection("games", worksGames);
 const worksMusicContainer = createSection("music", worksMusic);
 const worksOtherContainer = createSection("other", worksOther);
+const worksZikuuContainer = createSection("zikuu", worksZikuu);
 const home = document.getElementById("home");
 home.appendChild(worksGamesContainer);
 home.appendChild(worksMusicContainer);
 home.appendChild(worksOtherContainer);
+home.appendChild(worksZikuuContainer);
 switchActiveSection("games");
