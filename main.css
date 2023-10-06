@@ -20,7 +20,7 @@ hr {
     width: 100%;
 }
 
-h1 {
+h1, h3 {
     padding-left: 15px;
     padding-right: 15px; 
 }
@@ -35,6 +35,11 @@ p {
     font-family: 'Zen Maru Gothic', 'Jura';
     color: var(--color-text-main);
     text-decoration: none;
+}
+
+.subtext {
+    color: var(--color-text-sub);
+    font-style: italic;
 }
 
 body {
@@ -65,6 +70,10 @@ body {
     display: flex;
     flex-flow: row nowrap;
     gap: 5px;
+}
+
+a {
+    color: var(--color-accent-work-finished);
 }
 
 .tab {
