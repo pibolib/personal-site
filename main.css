@@ -9,11 +9,13 @@
     --color-div-section: #31314D;
     --color-accent-work-unfinished: #F45959;
     --color-accent-work-finished: #87CEFA;
+    --color-accent-link: #87CEFA47;
     --font-size-title: 45px;
     --font-size-tab: 30px;
     --font-size-work-title: 24px;
     --font-size-work-subtitle: 21px;
     --font-size-default-text: 21px;
+    --font-size-link: 18px;
 }
 
 hr {
@@ -39,6 +41,12 @@ p {
 
 .subtext {
     color: var(--color-text-sub);
+    font-style: italic;
+}
+
+.subtextlink {
+    color: var(--color-accent-link);
+    font-size: var(--font-size-link);
     font-style: italic;
 }
 

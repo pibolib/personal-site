@@ -94,7 +94,7 @@ function switchTheme(themeJSON) {
 
 const worksGames = [
     {
-        name: "TSUNAGARI TOWER",
+        name: "???",
         date: "TBD",
         description: "In progress. More information to come soon.",
         links: [],
@@ -104,28 +104,28 @@ const worksGames = [
         name: "Coin Flip Magicks",
         date: "2023",
         description: "A top-down action game developed in Godot 4.1 for Windows. Solo developed by pibolib for Mini Jam 139.",
-        links: [new Link("github","https://github.com/pibolib/coin-flip-magicks"), new Link("itchio","https://pibolib.itch.io/coin-flip-magicks")],
+        links: [new Link("github","https://github.com/pibolib/coin-flip-magicks"), new Link("itch.io","https://pibolib.itch.io/coin-flip-magicks")],
         completionStatus: true
     },
     {
         name: "TSUNAGARI TOWER: Phoebe's Ascent",
         date: "2022-23",
         description: "A puzzle game developed in Godot 3.5. Solo developed by pibolib, originally for GMTK Game Jam 2022.",
-        links: [new Link("github","https://github.com/pibolib/tsunagari-tower"), new Link("itchio","https://pibolib.itch.io/tsunagari-tower")],
+        links: [new Link("github","https://github.com/pibolib/tsunagari-tower"), new Link("itch.io","https://pibolib.itch.io/tsunagari-tower")],
         completionStatus: true
     },
     {
         name: "Trung Sisters",
         date: "2022",
         description: "A strategy game developed in Godot 3.4. Developed with my brother for Historically Accurate Game Jam 5.",
-        links: [new Link("github","https://github.com/pibolib/trung-sisters"), new Link("itchio","https://pibolib.itch.io/trung-sisters")],
+        links: [new Link("github","https://github.com/pibolib/trung-sisters"), new Link("itch.io","https://pibolib.itch.io/trung-sisters")],
         completionStatus: true
     },
     {
         name: "GemStreak: Curse of the Time Machine",
         date: "2021",
         description: "A puzzle game developed in Godot 3.2. Developed with friends for Godot Wild Jam #35.",
-        links: [new Link("github","https://github.com/pibolib/gemstreak"), new Link("itchio","https://pibolib.itch.io/gemstreak")],
+        links: [new Link("github","https://github.com/pibolib/gemstreak"), new Link("itch.io","https://pibolib.itch.io/gemstreak")],
         completionStatus: true
     }
 ];
@@ -146,7 +146,7 @@ const worksMusic = [
         completionStatus: true
     },
     {
-        name: "WeeklyBeats 2022",
+        name: "WeeklyBeats",
         date: "2022",
         description: "A challenge I participated in throughout 2022, where participants were challenged to produce one track per week.",
         links: [new Link("generic","https://weeklybeats.com/pibolib?s=&f=8&y=2022")],
@@ -185,10 +185,10 @@ const worksMusic = [
 const worksOther = [
     {
         name: "Personal Site",
-        date: "2020-23",
+        date: "2020-present",
         description: "My personal portfolio site.",
         links: [],
-        completionStatus: true
+        completionStatus: false
     }
 ];
 
@@ -196,8 +196,8 @@ const worksZikuu = [
     {
         name: "Bringers of Light",
         date: "2023",
-        description: "A team consisting of 時空Δ and Mamoriya, producing BMS for BOF2023.",
-        links: [new Link("generic", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126")],
+        description: "A team consisting of 時空Δ and Mamoriya, produced BMS for BOF:NT.",
+        links: [new Link("team page", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126")],
         completionStatus: false,
     }
 ];
