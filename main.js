@@ -49,10 +49,21 @@ function createWorkContainer(workJSON) {
     const container = document.createElement("div");
     container.classList.add("work");
     const span1 = createSpan(workJSON.name, "work-title");
-    const span2 = createSpan(" ("+workJSON.date+")","work-date");
-    const br = document.createElement("br");
+    const span2 = createSpan(" ("+workJSON.date+") ","work-date");
     container.appendChild(span1);
     span1.appendChild(span2);
+    for (var i = 0; i < workJSON.links.length; i++) {
+        const a = document.createElement("a");
+        var linkSpan = createSpan(workJSON.links[i].linkType+" ", "subtextlink");
+        a.appendChild(linkSpan);
+        a.href = workJSON.links[i].site;
+        span1.appendChild(a);
+        var secondSpan = createSpan(" / ","subtextlink")
+        if(i != workJSON.links.length - 1) {
+            span1.appendChild(secondSpan);
+        }
+    }
+    const br = document.createElement("br");
     container.appendChild(br);
     const descriptionDiv = document.createElement("div");
     const description = createSpan(workJSON.description, "en");
@@ -149,7 +160,7 @@ const worksMusic = [
         name: "WeeklyBeats",
         date: "2022",
         description: "A challenge I participated in throughout 2022, where participants were challenged to produce one track per week.",
-        links: [new Link("generic","https://weeklybeats.com/pibolib?s=&f=8&y=2022")],
+        links: [new Link("profile page","https://weeklybeats.com/pibolib?s=&f=8&y=2022")],
         completionStatus: true
     },
     {
@@ -184,11 +195,18 @@ const worksMusic = [
 
 const worksOther = [
     {
-        name: "Personal Site",
-        date: "2020-present",
-        description: "My personal portfolio site.",
+        name: "Radiance",
+        date: "2023-present",
+        description: "A Tabletop RPG designed for beginners. Has simplified systems but increases the stakes to encourage players to exit their comfort zones. More information coming soon.",
         links: [],
         completionStatus: false
+    },
+    {
+        name: "Personal Site",
+        date: "2020-present",
+        description: "My personal portfolio site. Always in development, but still presentable.",
+        links: [],
+        completionStatus: true
     }
 ];
 
@@ -197,8 +215,8 @@ const worksZikuu = [
         name: "Bringers of Light",
         date: "2023",
         description: "A team consisting of 時空Δ and Mamoriya, produced BMS for BOF:NT.",
-        links: [new Link("team page", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126")],
-        completionStatus: false,
+        links: [new Link("event", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126"), new Link("youtube", "https://www.youtube.com/playlist?list=PLN8RvyXx3vpEZWx17HkNreFA9C9T4oAG-"), new Link("soundcloud", "https://soundcloud.com/torofu/sets/team-bringers-of-light-bof-nt")],
+        completionStatus: true,
     }
 ];
 
