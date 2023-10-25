@@ -1,13 +1,3 @@
-class Work {
-    constructor(name, date, description, links, completionStatus) {
-        this.name = name; //a string
-        this.date = date; //a string
-        this.description = description; //a string
-        this.links = links; //an array of Link objects
-        this.completionStatus = completionStatus; //a boolean
-    }
-}
-
 class Link {
     constructor(linkType, site) {
         this.linkType = linkType; //a string (see createLinkIcon for valid keys)
@@ -57,6 +47,7 @@ function createWorkContainer(workJSON) {
         var linkSpan = createSpan(workJSON.links[i].linkType+" ", "subtextlink");
         a.appendChild(linkSpan);
         a.href = workJSON.links[i].site;
+        a.target = "_blank";
         span1.appendChild(a);
         var secondSpan = createSpan(" / ","subtextlink")
         if(i != workJSON.links.length - 1) {
@@ -105,9 +96,9 @@ function switchTheme(themeJSON) {
 
 const worksGames = [
     {
-        name: "???",
+        name: "TBD",
         date: "TBD",
-        description: "In progress. More information to come soon.",
+        description: "New game projects currently under development. Please stand by for further information.",
         links: [],
         completionStatus: false
     },
@@ -121,7 +112,7 @@ const worksGames = [
     {
         name: "TSUNAGARI TOWER: Phoebe's Ascent",
         date: "2022-23",
-        description: "A puzzle game developed in Godot 3.5. Solo developed by pibolib, originally for GMTK Game Jam 2022.",
+        description: "A puzzle game developed in Godot 3.5. Solo developed by pibolib, originally for GMTK Game Jam 2022. Developed into a full version with revamped graphics and BGM postjam.",
         links: [new Link("github","https://github.com/pibolib/tsunagari-tower"), new Link("itch.io","https://pibolib.itch.io/tsunagari-tower")],
         completionStatus: true
     },
@@ -138,15 +129,29 @@ const worksGames = [
         description: "A puzzle game developed in Godot 3.2. Developed with friends for Godot Wild Jam #35.",
         links: [new Link("github","https://github.com/pibolib/gemstreak"), new Link("itch.io","https://pibolib.itch.io/gemstreak")],
         completionStatus: true
+    },
+    {
+        name: "DNArcher",
+        date: "2019",
+        description: "A top-down action where the player can gain abilities from defeated enemies, built in GameMaker Studio 2. Developed solo for Butterscotch Shenanijam 2019, where it received 1st place in fun factor and 3rd place overall.",
+        links: [new Link("itch.io", "https://pibolib.itch.io/dnarcher"), new Link("youtube", "https://youtu.be/SKJGEdmh2ws")],
+        completionStatus: true
     }
 ];
 
 const worksMusic = [
     {
+        name: "TBD",
+        date: "TBD",
+        description: "New album currently in production. Please stand by for further information.",
+        links: [],
+        completionStatus: false
+    },
+    {
         name: "fantasy_contradiction",
         date: "2023",
         description: "My third album, the first to be released on Spotify and other streaming platforms.",
-        links: [new Link("bandcamp", "https://pibolib.bandcamp.com/album/fantasy-contradiction"), new Link("spotify", "https://open.spotify.com/album/5LJPaYc5ZXHzxbH2NWrPvO")],
+        links: [new Link("bandcamp", "https://pibolib.bandcamp.com/album/fantasy-contradiction"), new Link("spotify", "https://open.spotify.com/album/5LJPaYc5ZXHzxbH2NWrPvO"), new Link("youtube", "https://www.youtube.com/playlist?list=OLAK5uy_nd0tIoWWrEv-4becg4NWgJq-mH2OGeLjI")],
         completionStatus: true
     },
     {
@@ -204,8 +209,8 @@ const worksOther = [
     {
         name: "Personal Site",
         date: "2020-present",
-        description: "My personal portfolio site. Always in development, but still presentable.",
-        links: [],
+        description: "My personal portfolio site. Always in development, but always presentable. Built with HTML/CSS/JS without any libraries.",
+        links: [new Link("github", "https://github.com/pibolib/personal-site")],
         completionStatus: true
     }
 ];
@@ -214,7 +219,7 @@ const worksZikuu = [
     {
         name: "Bringers of Light",
         date: "2023",
-        description: "A team consisting of 時空Δ and Mamoriya, produced BMS for BOF:NT.",
+        description: "A team consisting of 時空Δ and Mamoriya, produced BMS for BOF:NT. Did background images, lower level charts, and 1/2 of composition.",
         links: [new Link("event", "https://manbow.nothing.sh/event/event_teamprofile.cgi?event=142&team=126"), new Link("youtube", "https://www.youtube.com/playlist?list=PLN8RvyXx3vpEZWx17HkNreFA9C9T4oAG-"), new Link("soundcloud", "https://soundcloud.com/torofu/sets/team-bringers-of-light-bof-nt")],
         completionStatus: true,
     }

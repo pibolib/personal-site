@@ -44,6 +44,10 @@ p {
     font-style: italic;
 }
 
+.subtextnormal {
+    color: var(--color-text-sub);
+}
+
 .subtextlink {
     color: var(--color-accent-link);
     font-size: var(--font-size-link);
