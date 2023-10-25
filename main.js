@@ -105,28 +105,28 @@ const worksGames = [
     {
         name: "Coin Flip Magicks",
         date: "2023",
-        description: "A top-down action game developed in Godot 4.1 for Windows. Solo developed by pibolib for Mini Jam 139.",
+        description: "A top-down action game where the player uses coins to purchase new abilities and activate special effects. Developed in Godot 4.1 for Windows. Solo project by pibolib for Mini Jam 139.",
         links: [new Link("github","https://github.com/pibolib/coin-flip-magicks"), new Link("itch.io","https://pibolib.itch.io/coin-flip-magicks")],
         completionStatus: true
     },
     {
         name: "TSUNAGARI TOWER: Phoebe's Ascent",
         date: "2022-23",
-        description: "A puzzle game developed in Godot 3.5. Solo developed by pibolib, originally for GMTK Game Jam 2022. Developed into a full version with revamped graphics and BGM postjam.",
+        description: "A puzzle game where the player is tasked with forming connections on a hexagonal playfield. Developed in Godot 3.5 for Windows and HTML5. Solo project by pibolib for GMTK Game Jam 2022, made into a full version with revamped graphics and BGM postjam.",
         links: [new Link("github","https://github.com/pibolib/tsunagari-tower"), new Link("itch.io","https://pibolib.itch.io/tsunagari-tower")],
         completionStatus: true
     },
     {
         name: "Trung Sisters",
         date: "2022",
-        description: "A strategy game developed in Godot 3.4. Developed with my brother for Historically Accurate Game Jam 5.",
+        description: "A strategy game which takes place in Vietnam and gives a light take on the story of the Trưng sisters. Developed in Godot 3.3. Team project with my brother for Historically Accurate Game Jam 5, where it received 3rd place for thematic relevancy and 8th place overall.",
         links: [new Link("github","https://github.com/pibolib/trung-sisters"), new Link("itch.io","https://pibolib.itch.io/trung-sisters")],
         completionStatus: true
     },
     {
         name: "GemStreak: Curse of the Time Machine",
         date: "2021",
-        description: "A puzzle game developed in Godot 3.2. Developed with friends for Godot Wild Jam #35.",
+        description: "A 'falling block' puzzle game which tasks the player with creating lines from left to right made of rhombus shaped pieces. Developed in Godot 3.2. Team project with friends for Godot Wild Jam #35.",
         links: [new Link("github","https://github.com/pibolib/gemstreak"), new Link("itch.io","https://pibolib.itch.io/gemstreak")],
         completionStatus: true
     },
