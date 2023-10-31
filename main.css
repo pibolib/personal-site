@@ -1,155 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap");
 
 :root {
-    --color-text-main: #FFFFFF;
-    --color-text-sub: #FFFFFF47;
-    --color-div-bg: #14141F;
-    --color-div-tab-unselected: #181825;
-    --color-div-tab-selected: #1E1E2F;
-    --color-div-section: #31314D;
-    --color-accent-work-unfinished: #F45959;
-    --color-accent-work-finished: #87CEFA;
-    --color-accent-link: #87CEFA80;
-    --font-size-title: 45px;
-    --font-size-tab: 30px;
-    --font-size-work-title: 24px;
-    --font-size-work-subtitle: 21px;
-    --font-size-default-text: 21px;
-    --font-size-link: 18px;
+	--color-text-main: #ffffff;
+	--color-text-sub: #ffffff47;
+	--color-div-bg: #14141f;
+	--color-div-tab-unselected: #181825;
+	--color-div-tab-selected: #1e1e2f;
+	--color-div-section: #31314d;
+	--color-accent-work-unfinished: #f45959;
+	--color-accent-work-finished: #87cefa;
+	--color-accent-link: #87cefa80;
+	--font-size-title: 45px;
+	--font-size-tab: 30px;
+	--font-size-work-title: 24px;
+	--font-size-work-subtitle: 21px;
+	--font-size-default-text: 21px;
+	--font-size-link: 18px;
 }
 
 hr {
-    width: 100%;
+	width: 100%;
 }
 
-h1, h3 {
-    padding-left: 15px;
-    padding-right: 15px; 
+h1,
+h3 {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 p {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: var(--font-size-default-text);
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: var(--font-size-default-text);
 }
 
 * {
-    font-family: 'Zen Maru Gothic', 'Jura';
-    color: var(--color-text-main);
-    text-decoration: none;
+	font-family: "Zen Maru Gothic", "Jura";
+	color: var(--color-text-main);
+	text-decoration: none;
 }
 
 .subtext {
-    color: var(--color-text-sub);
-    font-style: italic;
+	color: var(--color-text-sub);
+	font-style: italic;
 }
 
 .subtextnormal {
-    color: var(--color-text-sub);
+	color: var(--color-text-sub);
 }
 
 .subtextlink {
-    color: var(--color-accent-link);
-    font-size: var(--font-size-link);
-    font-style: italic;
+	color: var(--color-accent-link);
+	font-size: var(--font-size-link);
+	font-style: italic;
 }
 
 body {
-    padding: 15px;
-    background-color: var(--color-div-bg);
+	padding: 15px;
+	background-color: var(--color-div-bg);
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-div-tab-selected);
-    max-width: 100%;
-    padding: 15px;
-    gap: 15px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-div-tab-selected);
+	max-width: 100%;
+	padding: 15px;
+	gap: 15px;
 }
 
 #top {
-    width: 100%;
-    height: 12%;
-    margin-bottom: 15px;
-    font-size: var(--font-size-title);
+	width: 100%;
+	height: 12%;
+	margin-bottom: 15px;
+	font-size: var(--font-size-title);
 }
 
 #tab-holder {
-    overflow-x: auto;
-    height: 8%;
-    max-height: 8%;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 5px;
+	overflow-x: auto;
+	height: 8%;
+	max-height: 8%;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 5px;
 }
 
 a {
-    color: var(--color-accent-work-finished);
+	color: var(--color-accent-work-finished);
 }
 
 .tab {
-    /* flex-grow: 1; */
-    width: calc(69px * 1.5); /* nice */
-    height: 100%;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-    background-color: var(--color-div-tab-unselected);
-    text-align: center;
-    font-size: var(--font-size-tab);
-    white-space: nowrap;
+	/* flex-grow: 1; */
+	width: calc(69px * 1.5); /* nice */
+	height: 100%;
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+	background-color: var(--color-div-tab-unselected);
+	text-align: center;
+	font-size: var(--font-size-tab);
+	white-space: nowrap;
 }
 
 .tab-selected {
-    background-color: var(--color-div-tab-selected);
+	background-color: var(--color-div-tab-selected);
 }
 
 .inactive {
-    display: none;
+	display: none;
 }
 
 .work {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;   
-    background-color: var(--color-div-section);
-    min-height:calc(55px*1.5);
-    padding: 6px 8px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	background-color: var(--color-div-section);
+	min-height: calc(55px * 1.5);
+	padding: 6px 8px;
 }
 
 .work-title {
-    font-size: var(--font-size-work-title);
+	font-size: var(--font-size-work-title);
 }
 
 .work-subtitle {
-    margin-top: -20px;
-    width: 80%;
-    max-width: 80%;
-    font-size: var(--font-size-work-subtitle);
+	margin-top: -20px;
+	width: 80%;
+	max-width: 80%;
+	font-size: var(--font-size-work-subtitle);
 }
 
 .work-date {
-    color: var(--color-text-sub);
+	color: var(--color-text-sub);
 }
 
 .work-accent {
-    margin-top: 10px;
-    margin-right: -8px;
-    margin-bottom: -6px;
-    width: calc(100% + 16px);
-    height: 9px;
-    align-self: flex-end;
+	margin-top: 10px;
+	margin-right: -8px;
+	margin-bottom: -6px;
+	width: calc(100% + 16px);
+	height: 9px;
+	align-self: flex-end;
 }
 
 .no-work {
-    width: 100%;
+	width: 100%;
 }
 
 .unfinished {
-    background-color: var(--color-accent-work-unfinished);
+	background-color: var(--color-accent-work-unfinished);
 }
 
 .finished {
-    background-color: var(--color-accent-work-finished);
+	background-color: var(--color-accent-work-finished);
 }
-
