@@ -158,7 +158,7 @@ const worksGames = [
 		name: "DNArcher",
 		date: "2019",
 		description:
-			"A top-down action where the player can gain abilities from defeated enemies, built in GameMaker Studio 2. Developed solo for Butterscotch Shenanijam 2019, where it received 1st place in fun factor and 3rd place overall.",
+			"A top-down action game where the player can gain abilities from defeated enemies, built in GameMaker Studio 2. Developed solo for Butterscotch Shenanijam 2019, where it received 1st place in fun factor and 3rd place overall.",
 		links: [
 			new Link("itch.io", "https://pibolib.itch.io/dnarcher"),
 			new Link("youtube", "https://youtu.be/SKJGEdmh2ws"),
