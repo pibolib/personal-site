@@ -111,6 +111,14 @@ const worksGames = [
 		completionStatus: false,
 	},
 	{
+		name: "ArcConnect",
+		date: "TBD",
+		description:
+			"Falling block puzzle game currently in development. More details to come soon.",
+		links: [],
+		completionStatus: false,
+	},
+	{
 		name: "Coin Flip Magicks",
 		date: "2023",
 		description:
