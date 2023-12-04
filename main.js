@@ -177,7 +177,7 @@ const worksGames = [
 
 const worksMusic = [
 	{
-		name: "TBD",
+		name: "Adventure Log",
 		date: "TBD",
 		description:
 			"New album currently in production. Please stand by for further information.",
