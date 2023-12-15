@@ -177,6 +177,19 @@ const worksGames = [
 
 const worksMusic = [
 	{
+		name: "WeeklyBeats",
+		date: "2024",
+		description:
+			"A challenge going on throughout 2024 where participants produce one track per week.",
+		links: [
+			new Link(
+				"profile page",
+				"https://weeklybeats.com/pibolib?s=&f=8&y=2024"
+			),
+		],
+		completionStatus: false,
+	},
+	{
 		name: "Adventure Log",
 		date: "TBD",
 		description:
